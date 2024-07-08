@@ -153,12 +153,19 @@ fig_1 = Figure(figsize=(2.5, 2.2), facecolor='#E9E8E8')
 ax_1 = fig_1.add_subplot()
 # BackGround Color
 ax_1.set_facecolor("#E9E8E8")
-# identify axis
+# Identify axis
 ax_1.fill_between(x=revenue_data['date'], y1=revenue_data["amount"], alpha=0.7)
+# Change font size and color
+ax_1.tick_params(labelsize = 7, colors = 'black')
+#Format date to look good
+fig_1.autofmt_xdate()
+# Add skyblue color to graph
+ax_1.plot(revenue_data['date'], revenue_data['amount'], color ='deepskyblue')
 
-
+# Draw figure
 canvas = FigureCanvasTkAgg(figure = fig_1, master = window)
 canvas.draw()
+# Position of figure
 canvas.get_tk_widget().place(x=40, y=220)
 
 
