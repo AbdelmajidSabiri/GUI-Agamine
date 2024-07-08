@@ -6,8 +6,7 @@ import pandas as pd
 from data import *
 
 
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\dell\Tkinter-Designer-master\build\assets\frame0")
+ASSETS_PATH = Path(r"C:\Users\dell\GUI-Agamine\build\assets\frame0")
 
 
 def relative_to_assets(path: str) -> Path:
